@@ -1,3 +1,5 @@
+Initial commit
+
 # 🍽️ UBI - Restaurant Discovery and Review Web App
 
 **UBI** is a full-stack web application that allows users to discover, filter, and review restaurants and cafes based on location and category. It features a modern UI, user authentication, and real-time data fetched via the Yelp Fusion API.
@@ -20,3 +22,6 @@
 - **Database:** MongoDB (with Mongoose)
 - **Authentication:** JSON Web Token (JWT)
 - **External API:** Yelp Fusion API
+
+# graduation-project
+
