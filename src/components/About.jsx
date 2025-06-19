@@ -1,34 +1,34 @@
 import React from "react";
-import img from "/src/assets/img/UBI.jpg";
-// import Button from "../layouts/Button";
+import UbiLogo from "../assets/img/logo_ubi_orange.png"; 
 
 const About = () => {
-    return (
-      <div className="min-h-screen flex flex-col lg:flex-row justify-center items-center lg:px-32 px-5">
-        <img src={img} alt="img"  className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-auto"/>
-  
-        <div className=" space-y-4 lg:pt-14">
-          <h1 className=" font-semibold text-4xl text-center md:text-start">
-            Neden Biz?
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-            architecto quisquam delectus minima perferendis nulla quia nisi
-            laborum, exercitationem cum quo accusantium, impedit sed. Dicta, quo
-            molestias omnis reprehenderit quae animi? Explicabo quasi accusamus
-            laboriosam temporibus delectus, aut a? Quasi?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi,
-            suscipit reiciendis accusamus recusandae eum aspernatur pariatur odit
-            veritatis facere. Magnam!
-          </p>
-          <div className=" flex justify-center lg:justify-start">
-            {/* <Button title="Learn More" /> */}
-          </div>
-        </div>
+  return (
+    <div
+      className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center px-4 py-20"
+      style={{
+        backgroundImage: "url('/assets/img/bg.jpg')", // arka plan resminin yolu
+      }}
+    >
+      <div className="bg-white bg-opacity-90 p-10 rounded-xl shadow-lg max-w-3xl text-center">
+        <img
+          src={UbiLogo}
+          alt="UBİ Logo"
+          className="w-24 h-24 mx-auto mb-6"
+        />
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">Hakkımızda</h1>
+        <p className="text-gray-700 whitespace-pre-line leading-relaxed text-lg">
+          UBİ, keşfetmeyi sevenler için geliştirilen modern bir restoran keşif uygulamasıdır.
+
+          {"\n\n"}En sevdiğiniz mekanları kolayca bulun, yeni lezzetleri deneyimleyin ve kendi gastronomi yolculuğunuzu başlatın. 
+          Sadeliği, şıklığı ve kullanıcı dostu tasarımıyla UBİ, şehirdeki en iyi lezzet duraklarını parmaklarınızın ucuna getiriyor.
+
+          {"\n\n"}Biz; kullanıcı deneyimini en üst seviyeye çıkarmayı, yerel işletmeleri desteklemeyi ve yemek tutkunlarını en iyi mekanlarla buluşturmayı hedefliyoruz.
+
+          {"\n\n"}✨ Ubi ile keşfet, tat ve paylaş.
+        </p>
       </div>
-    );
-  };
-  
-  export default About;
+    </div>
+  );
+};
+
+export default About;

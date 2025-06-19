@@ -7,6 +7,7 @@ import About from './components/About'
 import Yorumlar from './components/Yorumlar'
 import Login from './components/Login';
 import Register from "./components/Register";
+import MekanDetay from "./pages/MekanDetay";
 
 const App = () => {
   return (
@@ -18,9 +19,10 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/mekanlar' element={<Mekanlar />} />
             <Route path='/about' element={<About />} />
-            <Route path='/yorumlar' element={<Yorumlar />} />
             <Route path='/login' element={<Login />} />
             <Route path="/register" element={<Register />}/>
+            <Route path="/mekan/:id" element={<MekanDetay />} />
+
           </Routes>
       </main>
     </div>

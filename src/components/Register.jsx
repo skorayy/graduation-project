@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
@@ -14,7 +16,7 @@ const Register = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, name, surname }),
       });
 
       const data = await res.json();
@@ -41,11 +43,28 @@ const Register = () => {
         <h2 className="text-2xl font-bold mb-6 text-center">Kayıt Ol</h2>
         <form className="space-y-4" onSubmit={handleRegister}>
           <input
+            type="text"
+            placeholder="İsim"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full p-3 border border-gray-300 rounded-md"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Soyisim"
+            value={surname}
+            onChange={(e) => setSurname(e.target.value)}
+            className="w-full p-3 border border-gray-300 rounded-md"
+            required
+          />
+          <input
             type="email"
             placeholder="E-posta"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-md"
+            required
           />
           <input
             type="password"
@@ -53,6 +72,7 @@ const Register = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-md"
+            required
           />
           <button
             type="submit"
